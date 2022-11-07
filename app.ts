@@ -1,18 +1,14 @@
-function add(n1:number,n2:number, showResult:boolean, phrase:string){
-  // if(typeof n1 !== 'number' || typeof n2 !== 'number'){
-  //   throw new Error('input value is not right')
-  // }
-  const result = n1 + n2;
-  if(showResult){
-    console.log(phrase + result)
-  }else{
-  return result;
-  }
+const person:{
+  name: string;
+  age: number;
+  hobbies:string[];
+  // tuple type
+  role: [number, string]
+} ={
+  name:'Mike',
+  age: 30,
+  hobbies:['book','game'],
+  role:[2,'author'],
 }
 
-const number1 = 5;
-const number2 = 2.8;
-const printResult = true;
-const resultPhrase = "Result: "
-
-add(number1, number2,printResult, resultPhrase);
+person.role = [0, 'admin'];
