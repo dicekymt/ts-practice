@@ -1,17 +1,28 @@
-function add(n1, n2, showResult, phrase) {
-    // if(typeof n1 !== 'number' || typeof n2 !== 'number'){
-    //   throw new Error('input value is not right')
-    // }
-    if (showResult) {
-        var result = n1 + n2;
-        console.log(phrase + result);
-    }
-    else {
-        return n1 + n2;
-    }
+// const person:{
+//   name: string;
+//   age: number;
+//   hobbies:string[];
+//   // tuple type
+//   role: [number, string]
+// } ={
+//   name:'Mike',
+//   age: 30,
+//   hobbies:['book','game'],
+//   role:[2,'author'],
+// }
+var Role;
+(function (Role) {
+    Role[Role["ADMIN"] = 0] = "ADMIN";
+    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
+    Role[Role["AUTHOR"] = 2] = "AUTHOR";
+})(Role || (Role = {}));
+var person = {
+    name: 'Mike',
+    age: 30,
+    hobbies: ['book', 'game'],
+    role: Role.ADMIN
+};
+// person.role = [0, 'admin'];
+if (person.role === Role.ADMIN) {
+    console.log("Admin User");
 }
-var number1 = 5;
-var number2 = 2.8;
-var printResult = true;
-var resultPhrase = "Result: ";
-add(number1, number2, printResult, resultPhrase);
